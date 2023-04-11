@@ -5,6 +5,8 @@ class Question(models.Model):
     question_text = models.CharField('Question text', max_length=200)
     pub_date = models.DateTimeField('Date published')
 
+    class Meta:
+        pass
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
